@@ -15,26 +15,23 @@
 5. [Network Discovery & Enumeration](#network-discovery--enumeration)
    - [Initial Network Mapping](#initial-network-mapping)
    - [Service Enumeration](#service-enumeration)
-6. [Vulnerability Assessment](#vulnerability-assessment)
-   - [Automated Scanning](#automated-scanning)
-   - [Manual Analysis](#manual-analysis)
-7. [Initial Access Vectors](#initial-access-vectors)
+6. [Initial Access Vectors](#initial-access-vectors)
    - [Network Attacks](#network-attacks)
    - [Web Application Attacks](#web-application-attacks)
-8. [Post-Exploitation](#post-exploitation)
+7. [Post-Exploitation](#post-exploitation)
    - [Linux Systems](#linux-systems)
    - [Windows Systems](#windows-systems)
-9. [Active Directory Attacks](#active-directory-attacks)
+8. [Active Directory Attacks](#active-directory-attacks)
    - [Initial Attack Vectors](#initial-attack-vectors)
    - [Post-Compromise Enumeration](#post-compromise-enumeration)
    - [Post-Compromise Attacks](#post-compromise-attacks)
-10. [Privilege Escalation](#privilege-escalation)
+9. [Privilege Escalation](#privilege-escalation)
    - [Linux Privilege Escalation](#linux-privilege-escalation)
    - [Windows Privilege Escalation](#windows-privilege-escalation)
-11. [Lateral Movement](#lateral-movement)
+10. [Lateral Movement](#lateral-movement)
     - [Network Pivoting](#network-pivoting)
     - [Credential Reuse](#credential-reuse)
-12. [Clean-up & Documentation](#clean-up--documentation)
+11. [Clean-up & Documentation](#clean-up--documentation)
     - [System Cleanup](#system-cleanup)
     - [Documentation Requirements](#documentation-requirements)
 
@@ -212,6 +209,8 @@ cat subdomains.txt | httprobe -s -p https:443 | \
 # Certificate Transparency
 curl -s "https://crt.sh/?q=%25.domain.com&output=json" | jq .
 ```
+
+See Automation Script at: [OSINT Exam Guide - Automation Script](./OSINT%20Exam%20Guide.md#automation-script)
 
 #### Google Dorks
 ```bash
