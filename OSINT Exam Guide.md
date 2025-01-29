@@ -169,8 +169,8 @@ mkdir -p "$base_dir"/{info,subdomains,screenshots}
 whois "$domain" > "$base_dir/info/whois.txt"
 subfinder -d "$domain" > "$base_dir/subdomains/found.txt"
 assetfinder "$domain" | grep "$domain" >> "$base_dir/subdomains/found.txt"
-cat "$base_dir/subdomains/found.txt" | httprobe -prefer-https > "$base_dir/subdomains/alive.txt"
-gowitness file -f "$base_dir/subdomains/alive.txt" -P "$base_dir/screenshots/"
+cat "$base_dir/subdomains/found.txt" | grep "$domain" | sort -u | httprobe -prefer-https | grep https | sed 's/https\?:\/\///' | tee -a "$base_dir/subdomains/alive.txt"
+gowitness file -f "$base_dir/subdomains/alive.txt" -P "$base_dir/screenshots/" --no-http
 ```
 
 ## Image & Location Intelligence
