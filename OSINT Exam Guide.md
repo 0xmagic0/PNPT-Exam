@@ -4,12 +4,13 @@
 1. [Core OSINT Concepts](#core-osint-concepts)
 2. [Search Engine Intelligence](#search-engine-intelligence)
 3. [People & Identity Research](#people--identity-research)
-4. [Social Media Intelligence](#social-media-intelligence)
-5. [Website Reconnaissance](#website-reconnaissance)
-6. [Image & Location Intelligence](#image--location-intelligence)
-7. [Business Intelligence](#business-intelligence)
-8. [Automation & Tools](#automation--tools)
-9. [OPSEC & Ethics](#opsec--ethics)
+4. [Password Intelligence](#password-intelligence)
+5. [Social Media Intelligence](#social-media-intelligence)
+6. [Website Reconnaissance](#website-reconnaissance)
+7. [Image & Location Intelligence](#image--location-intelligence)
+8. [Business Intelligence](#business-intelligence)
+9. [Automation & Tools](#automation--tools)
+10. [OPSEC & Ethics](#opsec--ethics)
 
 ## Core OSINT Concepts
 
@@ -76,6 +77,27 @@ phoneinfoga serve -p 8080
 ### Voter Records
 - VoterRecords.com
 - State-specific databases
+
+## Password Intelligence
+
+### Breach Data Resources
+- HaveIBeenPwned (Free)
+  - Email/domain breach checking
+  - Password breach verification
+- Scylla.sh (Free)
+  - Historical breach database
+  - Raw data search capabilities
+
+### Commercial Data Aggregators
+- DeHashed
+- LeakCheck
+- SnusBase
+- WeLeakInfo
+
+### Search Techniques
+- Google dorks for exposed credentials
+- Historical data archives
+- Hash lookup services (hashes.org)
 
 ## Social Media Intelligence
 
