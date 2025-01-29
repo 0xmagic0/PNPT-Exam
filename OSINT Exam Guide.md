@@ -74,6 +74,11 @@ phoneinfoga scan -n <number>
 phoneinfoga serve -p 8080
 ```
 
+- TrueCaller
+- CallerIDTest
+- Infobel
+- Password reset / Forgot password functionality
+
 ### Voter Records
 - VoterRecords.com
 - State-specific databases
